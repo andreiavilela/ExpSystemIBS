@@ -1,0 +1,28 @@
+<template>
+  <lightning-card icon-name="custom:custom40" title="Expense Information">
+      <lightning-record-view-form record-id={recordId} object-api-name="Expense__c" >    
+          <div class="slds-box">   
+              <lightning-output-field field-name="Name">
+              </lightning-output-field>
+              <lightning-output-field field-name="Trip__c">
+              </lightning-output-field>
+              <lightning-output-field field-name="Cost__c">
+              </lightning-output-field>
+              <lightning-output-field field-name="Status__c">
+              </lightning-output-field>
+              <lightning-output-field field-name="Responsible__c">
+              </lightning-output-field>
+              <lightning-output-field field-name="Description__c">
+              </lightning-output-field>
+              <lightning-output-field field-name="Total_Employees_on_Trip__c">
+              </lightning-output-field>
+              <lightning-output-field field-name="Total_Paid_Amount__c">
+              </lightning-output-field>
+              <lightning-output-field field-name="Total_Unpaid_Employees__c">
+              </lightning-output-field>
+          </div>
+      </lightning-record-view-form>
+      <c-expense-distribution-list record={recordId}>
+      </c-expense-distribution-list>
+  </lightning-card>
+</template>

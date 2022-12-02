@@ -1,0 +1,67 @@
+<template>   
+  <lightning-card icon-name="custom:custom20" title="Trip Information">
+      <lightning-record-view-form object-api-name={objectApiName} record-id={recordId}>
+          <div class="slds-box">
+              <div class="slds-grid slds-gutters">
+                  <div class="slds-col slds-size_1-of-2">
+                      <span class="slds-form-element__label">Trip Name</span>
+                          <div class="slds-p-bottom_medium">
+                              <lightning-formatted-text value={tripName}>
+                              </lightning-formatted-text >
+                          </div>
+
+                      <span class="slds-form-element__label">Trip Designation</span>
+                          <div  class="slds-p-bottom_medium">
+                              <lightning-formatted-text value={tripDesignation}>
+                              </lightning-formatted-text >
+                          </div>
+
+                      <span class="slds-form-element__label">Trip Description</span>
+                          <div  class="slds-p-bottom_medium">
+                              <lightning-formatted-text value={tripDescription}>
+                              </lightning-formatted-text >
+                          </div>
+
+                      <span class="slds-form-element__label">Trip Start Date</span>
+                          <div  class="slds-p-bottom_medium">
+                              <lightning-formatted-date-time value={tripStartDate} time-zone="UTC">
+                              </lightning-formatted-date-time >
+                          </div>
+
+                      <span class="slds-form-element__label">Trip End Date</span>
+                          <div  class="slds-p-bottom_medium">
+                              <lightning-formatted-date-time value={tripEndDate} time-zone="UTC">
+                              </lightning-formatted-date-time >
+                          </div>
+                          </div>
+
+                  <div class="slds-col slds-size_1-of-2">
+                      <span class="slds-form-element__label">Trip Total Cost</span>
+                          <div  class="slds-p-bottom_medium">
+                              <lightning-formatted-number value={tripTotalCost} format-style="currency" currency-code="EUR">
+                              </lightning-formatted-number>
+                          </div>
+
+                      <span class="slds-form-element__label">Trip Participants</span>
+                          <div  class="slds-p-bottom_medium">
+                              <lightning-formatted-number value={tripTotalParticipants}>
+                              </lightning-formatted-number>
+                          </div>
+
+                      <span class="slds-form-element__label">Trip Total Days</span>
+                          <div  class="slds-p-bottom_medium">
+                              <lightning-formatted-number value={tripTotalDays}>
+                              </lightning-formatted-number>
+                          </div>
+
+                      <span class="slds-form-element__label">Trip Total Vacation Days Required</span>
+                          <div  class="slds-p-bottom_medium">
+                              <lightning-formatted-number value={tripTotalVacationDaysRequired}>
+                              </lightning-formatted-number>
+                          </div>
+                  </div>
+              </div>
+          </div>
+      </lightning-record-view-form>
+  </lightning-card>
+</template>

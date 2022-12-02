@@ -1,0 +1,37 @@
+<template>
+  <lightning-card icon-name="custom:custom41" title="Expense Distribution" >
+       <div class="slds-var-m-around_xxx-small ">
+          <lightning-datatable
+                   key-field="Id"
+                   data={expensedistribution}
+                   columns={columns} 
+                   draft-values={draftValues}
+                   onsave={handleSave}
+                   onrowselection={getSelectedRecords}
+                   >
+               </lightning-datatable> 
+           </div>
+       
+       <div>
+           <lightning-button 
+               label="Delete" 
+               icon-name="utility:delete" 
+               disabled={isTrue}
+               variant="destructive" 
+               onclick={deleteRecords}  
+               class="slds-p-right_xx-small">
+           </lightning-button>
+
+           <lightning-button  
+               label="Add Employee To Expense" 
+               icon-name="utility:chevrondown" 
+               disabled={isFalse}
+               variant="brand" 
+               onclick={distributeExpense}>
+           </lightning-button>
+           
+           <c-expenses-distribution if:true={showFields} record={record}>
+           </c-expenses-distribution>
+       </div>
+   </lightning-card>
+</template>

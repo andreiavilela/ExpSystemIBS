@@ -1,0 +1,39 @@
+<template>
+  <lightning-card>
+      <template for:each={itemList} for:item="item" for:index="index">
+          <lightning-record-edit-form key={item.id} object-api-name="Expense_Distribution__c">
+              <lightning-messages> </lightning-messages>
+              <lightning-layout multiple-rows>
+                  <lightning-layout-item padding="around-small">
+                  <lightning-input-field class="expense" field-name="Expense__c" variant="label-stacked" value={record} required disabled>
+                  </lightning-input-field>
+              </lightning-layout-item>
+                  <lightning-layout-item padding="around-small">
+                      <lightning-input-field field-name="Employee__c" variant="label-stacked" required>
+                      </lightning-input-field>
+                  </lightning-layout-item>
+                 
+                 
+                  <lightning-layout-item padding="around-small" >
+                      <div class="slds-p-top_large">
+                          <lightning-icon icon-name="action:new" access-key={item.id} id={index}
+                              alternative-text="Add Row" size="x-small" title="Add Row" onclick={addRow} padding="slds-p-right_x-small">
+                          </lightning-icon>
+                          <lightning-icon icon-name="action:delete" access-key={item.id} id={index}
+                              alternative-text="Delete Row" size="x-small" title="Delete Row" onclick={removeRow}>
+                          </lightning-icon>
+                      </div>
+                  </lightning-layout-item>
+              </lightning-layout>
+          </lightning-record-edit-form>
+      </template>
+      <lightning-layout>
+        
+          <div class="slds-align_absolute-center">
+              <lightning-button variant="brand" onclick={handleSubmit} name="submit" label="Submit">
+              </lightning-button>
+          </div>
+      
+      </lightning-layout>
+  </lightning-card>
+</template>

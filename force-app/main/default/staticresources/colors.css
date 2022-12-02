@@ -1,0 +1,12 @@
+.datatable-blue{
+	color: #124D59 ;
+	background-color: #E2FAFF;
+}
+.datatable-blue:hoover{
+	color: #124D59 ;
+	background-color: #f0f8ff;
+}
+.myTable table>thead
+.slds-cell-fixed slds-has-button-menu{
+background: #f0f8ff;
+}
